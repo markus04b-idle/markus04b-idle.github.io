@@ -11,26 +11,17 @@
     <header class="header">
       <div class="logo">
         <div class="logo__circle" aria-hidden="true"></div>
-        <span class="logo__text">MARKUS</span>
-      </div>
-
-      <div class="header__actions">
-        <button id="themeToggle" class="iconButton" type="button" aria-label="Toggle theme">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
       </div>
     </header>
 
     <main class="card" role="main">
       <h1>Markus Brown</h1>
-      <p class="tagline">Cybersecurity · Data Science · AI · GRC · Cloud</p>
-      <p class="bio">Pursuing a Bachelor's and Master's degree in Cybersecurity. TryHackMe &amp; EC-Council Lab enthusiast. Seeking internships and collaboration opportunities.</p>
+      <p class="tagline">Cybersecurity · Data Science · AI · GRC</p>
+      <p class="bio">Current cybersecurity master's student focused on cloud security, threat analytics, and automation. Actively contributing to TryHackMe labs and EC-Council student projects.</p>
 
       <nav class="links" aria-label="Primary links">
         <a class="button" href="https://www.linkedin.com/in/markus-brown-724724336" target="_blank" rel="noopener">
-          <span class="icon" aria-hidden="true"><svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-340.4C24.1 107.6 0 83.6 0 53.5A53.52 53.52 0 0 1 53.5 0a53.6 53.6 0 0 1 53.4 53.5c0 30.1-24.1 54.1-53.6 54.1zM447.9 448h-92.7V302.4c0-34.7-12.4-58.4-43.5-58.4-23.8 0-38.1 16-44.4 31.4-2.3 5.6-2.9 13.4-2.9 21.3V448h-92.7s1.2-250.2 0-276.1h92.7v39.1c-.2.3-.5.7-.7 1h.7v-1c12.3-19 34.2-46.2 83.2-46.2 60.8 0 106.4 39.7 106.4 125.1V448z"/></svg></span>
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-340.4C24.1 107.6 0 83.6 0 53.5A53.52 53.52 0 0 1 53.5 0a53.6 53.6 0 0 1 53.4 53.5c0 30.1-24.1 54.1-53.6 54.1zm356.7 340.4h-92.7V302.4c0-34.7-12.4-58.4-43.5-58.4-23.8 0-38.1 16-44.4 31.4-2.3 5.6-2.9 13.4-2.9 21.3V448h-92.7s1.2-250.2 0-276.1h92.7v39.1c12.3-19 34.2-46.2 83.2-46.2 60.8 0 106.4 39.7 106.4 125.1V448z"/></svg></span>
           LinkedIn
         </a>
         <a class="button" href="https://github.com/markus04b-idle" target="_blank" rel="noopener">
@@ -51,37 +42,24 @@
         </a>
       </nav>
 
+      <section class="details" aria-label="Skills and focus areas">
+        <h2 class="details__title">Core focus areas</h2>
+        <ul class="details__list">
+          <li>Cloud security & compliance (AWS / Azure)</li>
+          <li>Security operations, monitoring, and threat detection</li>
+          <li>Data modeling, machine learning, and automation</li>
+        </ul>
+      </section>
+
       <div class="meta">Last updated: <time datetime="2026-03-18">Mar 18, 2026</time></div>
     </main>
 
     <footer class="footer">
-      <small>Built with HTML &amp; CSS • Hosted on GitHub Pages</small>
+      <small>© 2026 Markus Brown</small>
     </footer>
   </div>
 
   <div class="bg" aria-hidden="true"></div>
 
-  <script>
-    const themeToggle = document.getElementById('themeToggle');
-    const root = document.documentElement;
-
-    const stored = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initial = stored || (prefersDark ? 'dark' : 'light');
-
-    const setTheme = (theme) => {
-      root.dataset.theme = theme;
-      themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
-      themeToggle.classList.toggle('is-dark', theme === 'dark');
-    };
-
-    setTheme(initial);
-
-    themeToggle.addEventListener('click', () => {
-      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-      setTheme(next);
-      localStorage.setItem('theme', next);
-    });
-  </script>
 </body>
 </html>
